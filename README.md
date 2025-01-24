@@ -1,6 +1,6 @@
 <h1 align="center">IO</h1>
 
-<h1 align="center">A Rocknix theme for 1:1 screens inspired by MinUI</h1>
+<h1 align="center">A ES theme for 1:1 screens inspired by MinUI</h1>
 
 ![social](https://github.com/user-attachments/assets/c34ac2d1-cee8-43f4-9872-01fba125847d)
 
