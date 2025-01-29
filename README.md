@@ -2,6 +2,9 @@
 
 <h1 align="center">A EmulationStation theme for 1:1 screens inspired by MinUI</h1>
 
+<b>IMPORTANT</b>
+- The theme uses features supported only by an updated version of EmulationStation present in the latest version of <b>Rocknix and Knulli.</b>
+
 
 </hr>
 
