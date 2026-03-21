@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>	
+<variables>
+<art>thumbnail</art>
+<logovisible>false</logovisible>
+<boxartvisible>true</boxartvisible>
+	<glbackground>./assets/bg.png</glbackground>
+</variables>
+</theme>

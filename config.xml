@@ -1,0 +1,30 @@
+<theme>
+    
+    <formatVersion>4</formatVersion>
+
+
+        <!-- Theme video delay -->
+
+        <include subset="Video delay" name="1 sec." displayName="1 sec.">./options/videodelay/video_delay_1.xml</include>
+        <include subset="Video delay" name="2 sec." displayName="2. sec.">./options/videodelay/video_delay_2.xml</include>
+        <include subset="Video delay" name="3 sec." displayName="3 sec.">./options/videodelay/video_delay_3.xml</include>
+        <include subset="Video delay" name="Instant" displayName="Instant">./options/videodelay/video_delay_0.xml</include>
+        <include subset="Video delay" name="No video" displayName="No video">./options/videodelay/no_video.xml</include>
+
+        <!--Image type in Detailed view-->
+
+        <include subset="gamelist art" name="Boxart" displayName="Boxart">./options/gamelist/thumbnail.xml</include>
+        <include subset="gamelist art" name="wheel" displayName="Logo">./options/gamelist/wheel.xml</include>
+
+    <!--Theme color-->
+
+        
+        <include subset="color" name="Black" displayName="Black">./options/color/black.xml</include>
+        <include subset="color" name="Blue" displayName="Blue">./options/color/blue.xml</include>
+        <include subset="color" name="Green" displayName="Green">./options/color/green.xml</include>
+        <include subset="color" name="Red" displayName="Red">./options/color/red.xml</include>
+        <include subset="color" name="Yellow" displayName="Yellow">./options/color/yellow.xml</include>
+        <include subset="color" name="Pink" displayName="Pink">./options/color/pink.xml</include>
+
+
+</theme>

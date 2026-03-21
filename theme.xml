@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Theme: IO-Rocknix
+Original author: Vidnez
+License: creative commons CC-BY-NC-SA
+-->
+<theme defaultTransition="instant">
+  <formatVersion>7</formatVersion>
+
+  
+    
+  <include name="ES Header">./header.xml</include>
+  <include name="Configs">./config.xml</include>
+  
+  <view name="menu">
+  
+    <menuText name="menutitle">
+      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <fontSize>0.04</fontSize>
+      <color>${titlescolor}</color>
+    </menuText>
+	
+    <menuText name="menufooter">
+      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <fontSize>0.02</fontSize>
+      <color>${textinfocolor}</color>
+    </menuText>
+	
+    <menuText name="menutext">
+      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <fontSize>0.035</fontSize>
+      <color>${textaccent}</color>
+      <selectorColor>ffffff</selectorColor>
+      <selectorColorEnd>ffffff</selectorColorEnd>
+      <selectedColor>${textaccentselect}</selectedColor>
+      <separatorColor>00000000</separatorColor>
+    </menuText>
+
+    <menuTextEdit name="menutextedit">
+      <inactive>./assets/menu-textinput.png</inactive>
+      <active>./assets/menu-textinput-active.png</active>
+    </menuTextEdit>
+	
+    <menuTextSmall name="menutextsmall">
+      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <fontSize>0.02</fontSize>
+      <color>${textinfocolor}</color>
+    </menuTextSmall>
+	
+    <menuBackground name="menubg">
+      <color>${menuaccent}</color>
+    </menuBackground>
+	
+  </view>
+  
+  <view name="system">
+
+    <image name="staticBackground" extra="true">
+      <size>0 0.6</size>
+      <pos>0.799 0.512</pos>
+      <origin>0.5 0.5</origin>
+      <tile>false</tile>
+      <linearSmooth>true</linearSmooth>
+      <path>./assets/bg.png</path>
+      <zIndex>0</zIndex>
+      <storyboard>
+        <animation property="scale" from="0" to="1" duration="150" mode="EaseIn"/>
+      </storyboard>
+    </image>
+
+    <image name="background_color" extra="true">
+      <size>1 1</size>
+      <color>${accent}</color>
+      <pos>0 0</pos>
+      <origin>0 0</origin>
+      <tile>false</tile>
+      <path>./assets/bgc.png</path>
+      <zIndex>0</zIndex>
+    </image>
+
+    <image name="imagebox" extra="true">
+      <path>{random}</path>
+      <pos>0.8 0.37</pos>
+      <origin>0.5 0.5</origin>
+      <minSize>0.267</minSize>
+      <imageSource>image</imageSource>
+      <color>909090FF</color>
+      <visible>true</visible>
+      <zIndex>2</zIndex>
+    </image>
+
+    <!--<video name="videobox" extra="true">
+      <path>{random}</path>
+      <delay>instant</delay>
+      <pos>0.8 0.37</pos>
+      <origin>0.5 0.5</origin>
+      <minSize>0.267</minSize>
+      <color>909090FF</color>
+      <effect>none</effect>
+      <visible>true</visible>
+      <zIndex>2</zIndex>
+    </video>-->
+
+    <image name="logos" extra="true">
+      <size>0.27 0</size>
+      <origin>0.5 0.5</origin>
+      <pos>0.8 0.37</pos>
+      <color>ffffff</color>
+      <path>./assets/logos/${system.theme}.png</path>
+      <zIndex>3</zIndex>
+    </image>
+
+    <image name="controllers" extra="true">
+        <size>0.3 0</size>
+        <origin>0 0</origin>
+        <pos>0.65 0.55</pos>
+        <path>./assets/controllers/default.png</path>
+        <path>./assets/controllers/${system.theme}.png</path>
+        <zIndex>2</zIndex>
+    </image>
+
+    <text name="logoText">
+      <selectorColor>ffffff</selectorColor>
+      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <forceUppercase>0</forceUppercase>
+      <fontSize>0.05</fontSize>
+      <color>FFFFFF</color>
+     </text>
+	 </view>
+  
+  
+  
+  <view name="detailed">
+      
+    <textlist name="gamelist">
+       <x>0</x>
+       <y>0.15</y>
+       <h>0.7</h>
+       <w>1</w>
+       <lines>9</lines>
+         <itemTemplate>
+            <container>
+              <padding>10 0</padding>
+              <text name="game-name">
+                  <pos>0.03 0</pos>
+                  <size>0.55 1</size>
+                  <text>{game:name}</text>
+                  <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+                  <fontSize>0.05</fontSize><!-- 14 -->
+                  <color>${textaccent}</color>
+                  <verticalAlignment>center</verticalAlignment>
+                  <alignment>left</alignment>
+                  <multiLine>false</multiLine>
+                  <storyboard event="activate">
+                    <animation property="color" to="${textaccentselect}"/>
+                    <animation property="singleLineScroll" to="true"/>
+                  </storyboard>
+                  <storyboard event="deactivate">
+                     <animation property="color" to="${textaccent}"/>
+                     <animation property="singleLineScroll" to="false"/>
+                  </storyboard>
+                  <zIndex>1</zIndex>
+               </text>
+            </container>
+            
+            <ninepatch name="selector">
+               <origin>1 0</origin>
+               <pos>0.01 0.08</pos>
+               <size>0.6 0.9</size>
+               <cornerSize>20</cornerSize>
+               <path>./assets/selector.png</path>
+               <color>transparent</color>          
+               <storyboard event="activate">
+                  <animation property="color" to="ffffff"/>
+               </storyboard>
+               <storyboard event="deactivate">
+                  <animation property="color" to="transparent"/>
+               </storyboard>
+               <zIndex>1</zIndex>
+            </ninepatch>
+         </itemTemplate>
+      </textlist>
+	
+    <text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_players, md_lbl_lastplayed, md_lbl_playcount, logoText">
+          <visible>false</visible>
+    </text>
+
+    <datetime name="md_releasedate,md_lastplayed">
+      <visible>false</visible>
+    </datetime>
+    <text name="md_name,md_players,md_genre,md_developer,md_publisher,md_playcount,md_gametime_custom">
+      <visible>false</visible>
+    </text>
+    <text name="md_description">
+      <visible>false</visible>
+    </text>
+    <rating name="md_rating">
+      <visible>false</visible>
+    </rating>
+    <image name="playtime-logo">
+      <visible>false</visible>
+    </image>
+
+    <image name="md_image">
+      <visible>true</visible>
+      <origin>0.5 0.5</origin>
+      <pos>0.8 0.37</pos>
+      <minSize>0.267</minSize>
+      <imageSource>image</imageSource>
+       <default>./assets/default.png</default>
+      <zIndex>3</zIndex>
+    </image>
+
+    <image name="gbfilter" extra="true">
+      <visible>true</visible>
+      <origin>0.5 0.5</origin>
+      <pos>0.8 0.37</pos>
+      <minSize>0.267</minSize>
+      <path>./assets/gbfilter/${system.theme}.png</path>
+      <zIndex>4</zIndex>
+    </image>
+
+    <image name="md_thumbnail">
+      <visible>${boxartvisible}</visible>
+      <origin>0.5 0.5</origin>
+      <pos>0.8 0.67</pos>
+      <maxSize>0.25</maxSize>
+      <imageSource>${art}</imageSource>
+      <default>./assets/defwheel.png</default>
+      <zIndex>2</zIndex>
+    </image>
+
+     <image name="md_wheel">
+      <visible>${logovisible}</visible>
+      <origin>0.5 0.5</origin>
+      <pos>0.8 0.677</pos>
+      <maxSize>0.267</maxSize>
+      <imageSource>${art}</imageSource>
+      <default>./assets/defwheel.png</default>
+      <zIndex>2</zIndex>
+    </image>
+	
+    <video name="md_video">
+      <visible>true</visible>
+	    <origin>0.5 0.5</origin>
+      <pos>0.8 0.37</pos>
+      <minSize>0.267</minSize>
+      <delay>${delay}</delay>
+      <showSnapshotNoVideo>false</showSnapshotNoVideo>
+      <showSnapshotDelay>false</showSnapshotDelay>
+      <snapshotSource>image</snapshotSource>
+	    <effect>none</effect>
+      <zIndex>3</zIndex>
+    </video>
+
+      <image name="background" extra="true">
+      <size>0 0.6</size>
+      <pos>0.799 0.512</pos>
+      <origin>0.5 0.5</origin>
+      <tile>false</tile>
+      <linearSmooth>true</linearSmooth>
+      <path>${glbackground}</path>
+      <zIndex>2</zIndex>
+      <storyboard>
+        <animation property="scale" from="0" to="1" duration="150" mode="EaseIn"/>
+      </storyboard>
+    </image>
+
+    <image name="background_color" extra="true">
+      <size>1 1</size>
+      <color>${accent}</color>
+      <pos>0 0</pos>
+      <origin>0 0</origin>
+      <tile>false</tile>
+      <path>./assets/bgc.png</path>
+      <zIndex>0</zIndex>
+    </image>
+
+	</view>
+  
+
+  <view name="basic">
+      <textlist name="gamelist">
+         <x>0</x>
+         <y>0.15</y>
+         <h>0.7</h>
+         <lines>9</lines>
+         <zIndex>1</zIndex>
+         <itemTemplate>
+            <container>
+               <padding>20 0</padding>
+               <padding ifSubset="aspect-ratio:3-2|3-2-auto">10 0</padding>
+               <text name="game-name">
+                  <pos>0.03 0</pos>
+                  <size>0.94 1</size>
+                  <text>{game:name}</text>
+                  <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+                  <fontSize>0.05</fontSize><!-- 14 -->
+                  <color>${textaccent}</color>
+                  <verticalAlignment>center</verticalAlignment>
+                  <alignment>center</alignment>
+                  <multiLine>false</multiLine>
+                  <storyboard event="activate">
+                     <animation property="color" to="${textaccentselect}"/>
+                     <animation property="singleLineScroll" to="true"/>
+                  </storyboard>
+                  <storyboard event="deactivate">
+                     <animation property="color" to="${textaccent}"/>
+                     <animation property="singleLineScroll" to="false"/>
+                  </storyboard>
+                  <zIndex>1</zIndex>
+               </text>
+            </container>
+            <ninepatch name="selector">
+               <origin>1 0</origin>
+               <pos>0.01 0.08</pos>
+               <size>0.98 0.9</size>
+               <cornerSize>20</cornerSize>
+               <path>./assets/selector.png</path>
+               <color>transparent</color>          
+               <storyboard event="activate">
+                  <animation property="color" to="ffffff"/>
+               </storyboard>
+               <storyboard event="deactivate">
+                  <animation property="color" to="transparent"/>
+               </storyboard>
+               <zIndex>1</zIndex>
+            </ninepatch>
+         </itemTemplate>
+      </textlist>
+
+      <text name="logoText">
+        <visible>false</visible>
+      </text>
+
+      <image name="background_color" extra="true">
+      <size>1 1</size>
+      <color>${accent}</color>
+      <pos>0 0</pos>
+      <origin>0 0</origin>
+      <tile>false</tile>
+      <path>./assets/bgc.png</path>
+      <zIndex>0</zIndex>
+    </image>
+
+    </view>
+
+ 
+  
+  
+   <view name="grid">
+      <imagegrid name="gamegrid">
+        <systemNameSuffix>true</systemNameSuffix>
+        <pos>-0.01 0.09</pos>
+        <size>1 0.82</size>
+        <autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
+        <imageSource>image</imageSource>
+        <gameImage>./assets/default.png</gameImage>
+        <scrollDirection>vertical</scrollDirection>
+        <autoLayout>3 3</autoLayout>
+        <margin>0.00001 0.02</margin>
+        <padding>0.02 0.02 0 0</padding>
+        <animateSelection>false</animateSelection>
+        <maxlength>.5</maxlength>
+        <showVideoAtDelay>${pandelay}</showVideoAtDelay>
+      </imagegrid>
+
+
+    <gridtile name="default">
+      <backgroundColor>f5f5f5</backgroundColor>
+      <selectionMode>image</selectionMode>
+      <imageSizeMode>maxSize</imageSizeMode>
+    </gridtile>
+
+    <gridtile name="selected">
+      <backgroundCenterColor>ffffff</backgroundCenterColor>
+      <backgroundEdgeColor>${textaccentselect}</backgroundEdgeColor>
+      <imageColor>ffffffff</imageColor>
+    </gridtile>
+
+    <text name="gridtile">
+      <color>ffffff00</color>
+      <backgroundColor>ffffff00</backgroundColor>
+      <fontSize>0.025</fontSize>
+      <alignment>center</alignment>
+      <minSize>0.267</minSize>
+      <visible>false</visible>
+
+
+    </text>
+    <text name="gridtile_selected">
+      <color>0e0e29</color>
+      <glowColor>ffffff</glowColor>
+      <glowSize>5</glowSize>
+      <visible>false</visible>
+    </text>
+
+
+    <text name="system_name" extra="true">
+      <visible>false</visible>
+      <text>${system.fullName}</text>
+      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <forceUppercase>0</forceUppercase>
+      <size>0.9 0.025</size>
+      <pos>-0.23 0.955</pos>
+      <color>000000</color>
+      <alignment>center</alignment>
+      <fontSize>0.026</fontSize>
+      <zIndex>2</zIndex>
+    </text>
+
+    <text name="md_lbl_genre, md_genre, md_lbl_rating, md_lbl_developer, md_lbl_publisher, md_publisher, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_lbl_releasedate, md_rating, md_video,logoText">
+      <visible>false</visible>
+    </text>
+  
+
+    <text name="md_name">
+      <color>${titlescolor}</color>
+      <forceUppercase>0</forceUppercase>
+      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+       <alignment>center</alignment>
+      <fontSize>0.03</fontSize>
+      <pos>0.037 0.02</pos>
+      <size>0.6 0.026</size>
+    </text>
+
+	   <image name="gridtile.favorite">
+      <path>./assets/favorites.svg</path>
+      <pos>0.0 0</pos>
+      <maxSize>0.25 0.25</maxSize>
+      <origin>0 0</origin>
+      <color>ffffff80</color>
+     </image>
+     <image name="gridtile.favorite:selected">
+      <path>./assets/favorites.svg</path>
+      <color>ffffff</color>
+     </image>
+     <image name="gridtile.cheevos">
+      <path>./assets/cheevos.svg</path>
+      <pos>0 1</pos>
+      <maxSize>0.25 0.25</maxSize>
+      <origin>0 1</origin>
+      <color>ffffff80</color>
+     </image>
+     <image name="gridtile.cheevos:selected">
+      <path>./assets/cheevos.svg</path>
+      <color>ffffff</color>
+     </image>
+
+    <image name="background" extra="true">
+      <size>1 1</size>
+      <pos>0 0</pos>
+      <origin>0 0</origin>
+      <tile>false</tile>
+      <linearSmooth>true</linearSmooth>
+      <path>./assets/bg-glg.png</path>
+      <zIndex>2</zIndex>
+      <storyboard>
+        <animation property="y" from="0.5" begin="0.5" duration="150" mode="EaseIn"/>
+        <animation property="x" from="0.5" begin="0.5" duration="150" mode="EaseIn"/>
+        <animation property="scale" from="0" to="1" duration="150" mode="EaseIn"/>
+      </storyboard>
+    </image>
+
+    <image name="background_color" extra="true">
+      <size>1 1</size>
+      <color>${accent}</color>
+      <pos>0 0</pos>
+      <origin>0 0</origin>
+      <tile>false</tile>
+      <path>./assets/bgc.png</path>
+      <zIndex>0</zIndex>
+    </image>
+
+  </view>
+    <view name="system">
+  
+    <textlist name="textlist">
+         <x>0</x>
+         <y>0.15</y>
+         <h>0.7</h>
+         <lines>9</lines>
+         <zIndex>1</zIndex>
+         <itemTemplate>
+            <container>
+               <padding>20 0</padding>
+               <padding ifSubset="aspect-ratio:3-2|3-2-auto">10 0</padding>
+               <scrollpad>0</scrollpad>
+               <text name="system-name">
+                  <pos>0.03 0</pos>
+                  <size>0.557 1</size>
+                  <text>startswith({system:fullName}, "now-playing") ? "Now Playing" : 
+                        startswith({system:fullName}, "last played") ? "Last Played" : 
+                        startswith({system:fullName}, "all games") ? "All Games" : 
+                        startswith({system:fullName}, "favorites") ? "Favorites" : 
+                        startswith({system:fullName}, "never played") ? "Never Played" : 
+                        startswith({system:fullName}, "collections") ? "Collections" : 
+                        startswith({system:fullName}, "Mega Duck") ? "Megaduck" : 
+                        startswith({system:fullName}, "Plug and Play") ? "Plug &amp; Play" : 
+                        startswith({system:name}, "cps1") ? "Capcom Play System 1" : 
+                        startswith({system:name}, "cps2") ? "Capcom Play System 2" : 
+                        startswith({system:name}, "cps3") ? "Capcom Play System 3" : 
+                        startswith({system:fullName}, "vertical arcade") ? "Vertical Arcade" :
+                        startswith({system:fullName}, "Nintendo Entertainment System") ? "NES" : 
+                        startswith({system:fullName}, "wheel games") ? "Wheel games" : 
+                        startswith({system:fullName}, "trackball games") ? "Trackball games" : 
+                        startswith({system:fullName}, "spinner games") ? "Spinner games" : 
+                        startswith({system:fullName}, "retroachievements") ? "Retroachievements" : 
+                        startswith({system:fullName}, "arcade") ? "Arcade" : 
+                        startswith({system:fullName}, "lightgun games") ? "Lightgun games" : 
+                        startswith({system:name}, "moto") ? "MO/TO Family" : 
+                        startswith({system:name}, "chip-8") ? "CHIP-8/S/XO" : 
+                        startswith({system:name}, "moonlight") ? "Moonlight" : 
+                        startswith({system:name}, "gbah") ? "GBA (Hacks)" : 
+                        {system:fullName}
+                    </text>
+                  <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+                  <fontSize>0.05</fontSize><!-- 14 -->
+                  <color>${textaccent}</color>
+                  <verticalAlignment>center</verticalAlignment>
+                  <alignment>left</alignment>
+                  <multiLine>false</multiLine>
+                  <storyboard event="activate">
+                     <animation property="color" to="${textaccentselect}"/>
+                     <animation property="singleLineScroll" to="true"/>
+                  </storyboard>
+                  <storyboard event="deactivate">
+                     <animation property="color" to="${textaccent}"/>
+                     <animation property="singleLineScroll" to="false"/>
+                  </storyboard>
+                  <zIndex>1</zIndex>
+               </text>
+               
+            </container>
+            <ninepatch name="selector">
+               <origin>0 1</origin>
+               <pos>0.01 0.08</pos>
+               <size>0.6 0.9</size>
+               <cornerSize>20</cornerSize>
+               <path>./assets/selector.png</path>
+               <color>transparent</color>          
+               <storyboard event="activate">
+                  <animation property="color" to="ffffff"/>
+               </storyboard>
+               <storyboard event="deactivate">
+                  <animation property="color" to="transparent"/>
+               </storyboard>
+               <zIndex>1</zIndex>
+            </ninepatch>
+         </itemTemplate>
+      </textlist>
+
+      <text name="systemInfo">
+      <visible>false</visible>
+      <pos>-0.065 0.845</pos>
+      <size>1 0.25</size>
+      <alignment>center</alignment>
+      <backgroundColor>00000000</backgroundColor>
+      <color>000000</color>
+      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <fontSize>0.026</fontSize>
+    </text>
+
+   </view>
+  
+  
+</theme>

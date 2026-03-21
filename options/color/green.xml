@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>	
+<variables>
+	<accent>70b16be6</accent>
+	<menuaccent>70b16be6</menuaccent>
+	<textaccent>ffffff</textaccent>
+	<textaccentselect>70b16be6</textaccentselect>
+	<textinfocolor>ffffff</textinfocolor>
+	<titlescolor>ffffff</titlescolor>
+</variables>
+</theme>

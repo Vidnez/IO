@@ -1,0 +1,40 @@
+<theme>
+
+   <formatVersion>7</formatVersion>
+
+		<include>./theme.xml</include>
+      <include>./config.xml</include>
+
+		<view name="splash">
+
+      	<splash name="splash">
+			
+				<backgroundColor>${accent}</backgroundColor>
+
+			</splash>
+
+			<image name="background">
+
+				<path>./assets/splash.png</path>
+
+			</image>
+ <image name="progressbar">
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.7</pos>
+         <color>${accent}</color>
+         <colorEnd>${accent}</colorEnd>
+      </image>
+      <image name="progressbar:active">
+         <color>${textaccent}</color>
+         <colorEnd>${textaccent}</colorEnd>
+      </image>
+      <text name="label">
+         <origin>0.5 0.5</origin>
+         <pos>0.5 0.8</pos>
+         <alignment>center</alignment>
+         <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+         <fontSize>0.05</fontSize>
+         <color>${textaccent}</color>
+      </text>
+ 		</view>
+</theme>
