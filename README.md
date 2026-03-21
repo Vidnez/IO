@@ -10,7 +10,12 @@
 
 <div align="center">
 
-![ezgif com-gif-maker](https://github.com/user-attachments/assets/5bb51571-acc5-41fb-8ded-ac5c44691eef)
+<img width="1280" height="640" alt="social_net2" src="https://github.com/user-attachments/assets/2bcaf185-3738-4073-ac42-a9f0be13b007" />
+
+
+<div align="center">
+
+<img width="1080" height="720" alt="io_news" src="https://github.com/user-attachments/assets/ecfa579f-eb0a-48ae-bdda-df099573901e" />
 
 
 
