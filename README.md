@@ -10,7 +10,8 @@
 
 <div align="center">
 
-<img width="1280" height="640" alt="social_net2" src="https://github.com/user-attachments/assets/2bcaf185-3738-4073-ac42-a9f0be13b007" />
+<img width="1280" height="640" alt="social_net2" src="https://github.com/user-attachments/assets/b4580fd2-6c09-4554-8958-966e0dee82c3" />
+
 
 
 <div align="center">
