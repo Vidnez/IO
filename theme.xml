@@ -63,9 +63,9 @@ License: creative commons CC-BY-NC-SA
       <linearSmooth>true</linearSmooth>
       <path>./assets/bg.png</path>
       <zIndex>0</zIndex>
-      <storyboard>
+      <!--<storyboard>
         <animation property="scale" from="0" to="1" duration="150" mode="EaseIn"/>
-      </storyboard>
+      </storyboard>-->
     </image>
 
     <image name="background_color" extra="true">
@@ -261,9 +261,9 @@ License: creative commons CC-BY-NC-SA
       <linearSmooth>true</linearSmooth>
       <path>${glbackground}</path>
       <zIndex>2</zIndex>
-      <storyboard>
+      <!--<storyboard>
         <animation property="scale" from="0" to="1" duration="150" mode="EaseIn"/>
-      </storyboard>
+      </storyboard>-->
     </image>
 
     <image name="background_color" extra="true">
@@ -455,16 +455,147 @@ License: creative commons CC-BY-NC-SA
       <linearSmooth>true</linearSmooth>
       <path>./assets/bg-glg.png</path>
       <zIndex>2</zIndex>
-      <storyboard>
+      <!--<storyboard>
         <animation property="y" from="0.5" begin="0.5" duration="150" mode="EaseIn"/>
         <animation property="x" from="0.5" begin="0.5" duration="150" mode="EaseIn"/>
         <animation property="scale" from="0" to="1" duration="150" mode="EaseIn"/>
-      </storyboard>
+      </storyboard>-->
     </image>
 
     <image name="background_color" extra="true">
       <size>1 1</size>
       <color>${accent}</color>
+      <pos>0 0</pos>
+      <origin>0 0</origin>
+      <tile>false</tile>
+      <path>./assets/bgc.png</path>
+      <zIndex>0</zIndex>
+    </image>
+
+  </view>
+
+  <view name="video">
+      
+    <textlist name="gamelist">
+       <x>0</x>
+       <y>0.15</y>
+       <h>0.7</h>
+       <w>1</w>
+       <lines>9</lines>
+         <itemTemplate>
+            <container>
+              <padding>10 0</padding>
+              <text name="game-name">
+                  <pos>0.03 0</pos>
+                  <size>0.55 1</size>
+                  <text>{game:name}</text>
+                  <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+                  <fontSize>0.05</fontSize><!-- 14 -->
+                  <color>ffffff</color>
+                  <verticalAlignment>center</verticalAlignment>
+                  <alignment>left</alignment>
+                  <multiLine>false</multiLine>
+                  <storyboard event="activate">
+                    <animation property="color" to="${textaccentselect}"/>
+                    <animation property="singleLineScroll" to="true"/>
+                  </storyboard>
+                  <storyboard event="deactivate">
+                     <animation property="color" to="ffffff"/>
+                     <animation property="singleLineScroll" to="false"/>
+                  </storyboard>
+                  <zIndex>1</zIndex>
+               </text>
+            </container>
+            
+            <ninepatch name="selector">
+               <origin>1 0</origin>
+               <pos>0.01 0.08</pos>
+               <size>0.6 0.9</size>
+               <cornerSize>20</cornerSize>
+               <path>./assets/selector.png</path>
+               <color>transparent</color>          
+               <storyboard event="activate">
+                  <animation property="color" to="ffffff"/>
+               </storyboard>
+               <storyboard event="deactivate">
+                  <animation property="color" to="transparent"/>
+               </storyboard>
+               <zIndex>1</zIndex>
+            </ninepatch>
+         </itemTemplate>
+      </textlist>
+  
+    <text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_players, md_lbl_lastplayed, md_lbl_playcount, logoText">
+          <visible>false</visible>
+    </text>
+
+    <datetime name="md_releasedate,md_lastplayed">
+      <visible>false</visible>
+    </datetime>
+    <text name="md_name,md_players,md_genre,md_developer,md_publisher,md_playcount,md_gametime_custom">
+      <visible>false</visible>
+    </text>
+    <text name="md_description">
+      <visible>false</visible>
+    </text>
+    <rating name="md_rating">
+      <visible>false</visible>
+    </rating>
+    <image name="playtime-logo">
+      <visible>false</visible>
+    </image>
+
+    <!--<image name="md_image">
+      <origin>0.5 0.5</origin>
+      <pos>0.5 0.5</pos>
+      <minSize>1</minSize>
+      <zIndex>0</zIndex>
+    </image>-->
+   
+  
+    <video name="md_video">
+      <visible>true</visible>
+      <origin>0.5</origin>
+      <pos>0.5</pos>
+      <maxSize>1.3</maxSize>
+      <delay>${delay}</delay>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+      <snapshotSource>image</snapshotSource>
+      <showSnapshotDelay>true</showSnapshotDelay>
+      <effect>none</effect>
+      <zIndex>1</zIndex>
+    </video>
+
+
+      <image name="background" extra="true">
+      <size>1 1</size>
+      <color>${accent}</color>
+      <pos>0 0</pos>
+      <origin>0 0</origin>
+      <tile>false</tile>
+      <linearSmooth>true</linearSmooth>
+      <path>./assets/bg-glv.png</path>
+      <!--<storyboard>
+        <animation property="scale" from="50" to="1" duration="200" mode="EaseIn"/>
+      </storyboard>-->
+      <zIndex>3</zIndex>
+    </image>
+
+
+    <image name="background_de" extra="true">
+      <size>1 1</size>
+      <color>${accent}</color>
+      <pos>0 0</pos>
+      <origin>0 0</origin>
+      <tile>false</tile>
+      <path>./assets/de-glv.png</path>
+      <zIndex>2</zIndex>
+    </image>
+
+
+    <image name="background_color" extra="true">
+      <size>1 1</size>
+      <color>000000</color>
       <pos>0 0</pos>
       <origin>0 0</origin>
       <tile>false</tile>

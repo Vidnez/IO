@@ -79,7 +79,7 @@ License: creative commons CC-BY-NC-SA
     </helpsystem>
   </view>
   
-  <view name="basic, detailed, grid">
+  <view name="basic, detailed, grid, video">
     <helpsystem name="help">
       <pos>0.5 0.965</pos>
       <origin>0.5 0.5</origin>
